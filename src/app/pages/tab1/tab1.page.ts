@@ -24,6 +24,7 @@ export class Tab1Page {
         {
           name: 'titulo',
           type: 'text',
+          // value: 'ssss',
           placeholder: 'Nombre de la lista'
         }
       ],
@@ -32,6 +33,7 @@ export class Tab1Page {
         {
           text: 'Cancelar',
           role: 'cancel',
+
           handler: () => {
             console.log('CAncelar');
           }

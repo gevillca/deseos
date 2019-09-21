@@ -1,4 +1,7 @@
-import { Lista } from './../models/lista.model';
+import { Lista } from 'src/app/models/lista.model';
+// import { Tab2Page } from './../pages/tab2/tab2.page';
+// import { Tab1Page } from './../pages/tab1/tab1.page';
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,13 +9,8 @@ import { Injectable } from '@angular/core';
 })
 export class DeseosService {
   listas: Lista[] = [];
+  tit: string;
   constructor() {
-    // console.log('Servicio inicializado');
-
-    // const lista1 = new Lista('Recolectar piedra');
-    // const lista2 = new Lista('Heroes a desaparecer');
-    // this.listas.push(lista1, lista2);
-    // console.log(this.listas);
     this.cargarStorage();
   }
   crearLista(titulo: string) {
@@ -38,4 +36,15 @@ export class DeseosService {
     this.listas = this.listas.filter((listaData) => listaData.id !== lista.id);
     this.guardarStorage();
   }
+  // editarTitulo(id: number) {
+  //   this.listas.filter((listaData) => {
+  //     if (listaData.id === id) {
+  //       this.tit = listaData.titulo;
+  //     } else {
+  //       this.tit = 'rueb';
+  //     }
+  //   });
+  //   // console.log(lista.titulo);
+  //   console.log(this.tit);
+  // }
 }
