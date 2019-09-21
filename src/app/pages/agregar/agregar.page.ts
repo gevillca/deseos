@@ -44,6 +44,9 @@ export class AgregarPage implements OnInit {
     this.deseoService.guardarStorage();
     console.log(this.deseoService.listas);
   }
-
+  borrar(indice: number) {
+    this.lista.items.splice(indice, 1);
+    this.deseoService.guardarStorage();
+  }
   ngOnInit() {}
 }

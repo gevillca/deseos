@@ -6,13 +6,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
-  <ion-list color="dark">
-    <ion-item *ngFor="let lts of deseoService.listas" detail color="dark">
-      <ion-label>{{ lts.titulo }}</ion-label>
-    </ion-item>
-  </ion-list>
+<app-listas [terminada]="false"></app-listas>
 
+<ion-content color="dark">
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="tertiary" (click)="agregarLista()">
       <ion-icon name="add"></ion-icon>
